@@ -5,10 +5,12 @@ html
   body
     h1 Basic pug syntax for HTML
     p This template shows basic HTML syntax. 
+    //- unordered list of items 1-3
     ul
         li Item 1
         li Item 2
         li Item 3
+    //- table of headers and rows labeled
     table(border="1")
         tr
             th Header 1
@@ -19,4 +21,5 @@ html
         tr
             td Row 2, Cell 1
             td Row 2, Cell 2
+    //- image placed at bottom of table
     img(src="https://via.placeholder.com/150" alt="Placeholder Image")
