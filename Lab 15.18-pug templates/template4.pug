@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title Template 4
+  body
+    h1 Creating a dynamic person profile card
+    p This template uses an example with mixins and JavaScript.
+
+    //- Define the mixin to render a person profile card
+    mixin personCard(person)
+      .card
+        h2 #{person.name}
+        p Age: #{person.age}
+        if person.hobbies && person.hobbies.length
+          h3 Hobbies:
+          ul
+            each hobby in person.hobbies
+              li #{hobby}
+        else
+          p No hobbies listed.
+
+    //- Render profile cards dynamically for each person in the provided data
+
+    each person in people
+        +personCard(person)
+
