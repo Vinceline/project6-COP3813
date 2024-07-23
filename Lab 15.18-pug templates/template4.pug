@@ -11,6 +11,7 @@ html
       .card
         h2 #{person.name}
         p Age: #{person.age}
+        //- if the person has a hobby listed
         if person.hobbies && person.hobbies.length
           h3 Hobbies:
           ul
@@ -19,8 +20,7 @@ html
         else
           p No hobbies listed.
 
-    //- Render profile cards dynamically for each person in the provided data
-
+    //- render each person based on mixin and index.js
     each person in people
         +personCard(person)
 
